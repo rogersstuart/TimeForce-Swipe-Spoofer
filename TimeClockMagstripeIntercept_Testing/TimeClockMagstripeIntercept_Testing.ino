@@ -28,12 +28,13 @@ NfcAdapter nfc = NfcAdapter(pn532_i2c);
 
 void setup()
 {
-	Serial.begin(9600);
 	initalizePins();
 	
-	nfc.begin();
-	
 	delay(4000); //give the time clock a moment to stabilize after reset
+	
+	Serial.begin(9600);
+	
+	nfc.begin();		
 }
 
 void loop()
@@ -41,9 +42,16 @@ void loop()
 	if(nfc.tagPresent())
 	{
 		NfcTag tag = nfc.read();
+		
+		tag.getTagType();
+		Serial.println(tag.getUidString());
+		
 		if(tag.hasNdefMessage())
 		{
 			NdefMessage message = tag.getNdefMessage();
+			
+			Serial.println(message.getRecordCount());
+			
 			NdefRecord record = message.getRecord(0);
 			
 			uint8_t payloadLength = record.getPayloadLength();
