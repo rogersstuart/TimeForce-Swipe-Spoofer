@@ -51,6 +51,7 @@
         <avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>
         <avrgcc.compiler.symbols.DefSymbols>
           <ListValues>
+            <Value>__AVR_ATmega328p__</Value>
             <Value>__AVR_ATmega328P__</Value>
             <Value>ARDUINO=101</Value>
             <Value>ARDUINO_MAIN</Value>
@@ -61,14 +62,20 @@
         </avrgcc.compiler.symbols.DefSymbols>
         <avrgcc.compiler.directories.IncludePaths>
           <ListValues>
-            <Value>C:\Users\Stuart\Desktop\arduino-1.0.5-r2 (MasterController and Panels)\hardware\arduino\cores\arduino</Value>
-            <Value>C:\Users\Stuart\Desktop\arduino-1.0.5-r2 (MasterController and Panels)\hardware\arduino\variants\standard</Value>
-            <Value>C:\Users\Stuart\Desktop\arduino-1.0.5-r2 (MasterController and Panels)\libraries\NFC</Value>
-            <Value>C:\Users\Stuart\Desktop\arduino-1.0.5-r2 (MasterController and Panels)\libraries\NFC\utility</Value>
-            <Value>c:\users\stuart\desktop\arduino-1.0.5-r2 (mastercontroller and panels)\hardware\tools\avr\avr\include\</Value>
-            <Value>c:\users\stuart\desktop\arduino-1.0.5-r2 (mastercontroller and panels)\hardware\tools\avr\avr\include\avr\</Value>
-            <Value>c:\users\stuart\desktop\arduino-1.0.5-r2 (mastercontroller and panels)\hardware\tools\avr\avr\</Value>
-            <Value>c:\users\stuart\desktop\arduino-1.0.5-r2 (mastercontroller and panels)\hardware\tools\avr\lib\gcc\avr\4.3.2\include\</Value>
+            <Value>C:\Users\Stuart\Desktop\arduino-1.0.5-r2 (NDEF Writer)\hardware\arduino\cores\arduino</Value>
+            <Value>C:\Users\Stuart\Desktop\arduino-1.0.5-r2 (NDEF Writer)\hardware\arduino\variants\standard</Value>
+            <Value>C:\Users\Stuart\Desktop\arduino-1.0.5-r2 (NDEF Writer)\libraries\Wire</Value>
+            <Value>C:\Users\Stuart\Desktop\arduino-1.0.5-r2 (NDEF Writer)\libraries\Wire\utility</Value>
+            <Value>C:\Users\Stuart\Desktop\arduino-1.0.5-r2 (NDEF Writer)\libraries\PN532_I2C</Value>
+            <Value>C:\Users\Stuart\Desktop\arduino-1.0.5-r2 (NDEF Writer)\libraries\PN532_I2C\utility</Value>
+            <Value>C:\Users\Stuart\Desktop\arduino-1.0.5-r2 (NDEF Writer)\libraries\PN532</Value>
+            <Value>C:\Users\Stuart\Desktop\arduino-1.0.5-r2 (NDEF Writer)\libraries\PN532\utility</Value>
+            <Value>C:\Users\Stuart\Desktop\arduino-1.0.5-r2 (NDEF Writer)\libraries\NDEF_master</Value>
+            <Value>C:\Users\Stuart\Desktop\arduino-1.0.5-r2 (NDEF Writer)\libraries\NDEF_master\utility</Value>
+            <Value>c:\users\stuart\desktop\arduino-1.0.5-r2 (ndef writer)\hardware\tools\avr\avr\include\</Value>
+            <Value>c:\users\stuart\desktop\arduino-1.0.5-r2 (ndef writer)\hardware\tools\avr\avr\include\avr\</Value>
+            <Value>c:\users\stuart\desktop\arduino-1.0.5-r2 (ndef writer)\hardware\tools\avr\avr\</Value>
+            <Value>c:\users\stuart\desktop\arduino-1.0.5-r2 (ndef writer)\hardware\tools\avr\lib\gcc\avr\4.3.2\include\</Value>
           </ListValues>
         </avrgcc.compiler.directories.IncludePaths>
         <avrgcc.compiler.optimization.level>Optimize (-O1)</avrgcc.compiler.optimization.level>
@@ -81,6 +88,7 @@
         <avrgcccpp.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcccpp.compiler.general.ChangeDefaultBitFieldUnsigned>
         <avrgcccpp.compiler.symbols.DefSymbols>
           <ListValues>
+            <Value>__AVR_ATmega328p__</Value>
             <Value>__AVR_ATmega328P__</Value>
             <Value>ARDUINO=101</Value>
             <Value>ARDUINO_MAIN</Value>
@@ -91,14 +99,20 @@
         </avrgcccpp.compiler.symbols.DefSymbols>
         <avrgcccpp.compiler.directories.IncludePaths>
           <ListValues>
-            <Value>C:\Users\Stuart\Desktop\arduino-1.0.5-r2 (MasterController and Panels)\hardware\arduino\cores\arduino</Value>
-            <Value>C:\Users\Stuart\Desktop\arduino-1.0.5-r2 (MasterController and Panels)\hardware\arduino\variants\standard</Value>
-            <Value>C:\Users\Stuart\Desktop\arduino-1.0.5-r2 (MasterController and Panels)\libraries\NFC</Value>
-            <Value>C:\Users\Stuart\Desktop\arduino-1.0.5-r2 (MasterController and Panels)\libraries\NFC\utility</Value>
-            <Value>c:\users\stuart\desktop\arduino-1.0.5-r2 (mastercontroller and panels)\hardware\tools\avr\avr\include\</Value>
-            <Value>c:\users\stuart\desktop\arduino-1.0.5-r2 (mastercontroller and panels)\hardware\tools\avr\avr\include\avr\</Value>
-            <Value>c:\users\stuart\desktop\arduino-1.0.5-r2 (mastercontroller and panels)\hardware\tools\avr\avr\</Value>
-            <Value>c:\users\stuart\desktop\arduino-1.0.5-r2 (mastercontroller and panels)\hardware\tools\avr\lib\gcc\avr\4.3.2\include\</Value>
+            <Value>C:\Users\Stuart\Desktop\arduino-1.0.5-r2 (NDEF Writer)\hardware\arduino\cores\arduino</Value>
+            <Value>C:\Users\Stuart\Desktop\arduino-1.0.5-r2 (NDEF Writer)\hardware\arduino\variants\standard</Value>
+            <Value>C:\Users\Stuart\Desktop\arduino-1.0.5-r2 (NDEF Writer)\libraries\Wire</Value>
+            <Value>C:\Users\Stuart\Desktop\arduino-1.0.5-r2 (NDEF Writer)\libraries\Wire\utility</Value>
+            <Value>C:\Users\Stuart\Desktop\arduino-1.0.5-r2 (NDEF Writer)\libraries\PN532_I2C</Value>
+            <Value>C:\Users\Stuart\Desktop\arduino-1.0.5-r2 (NDEF Writer)\libraries\PN532_I2C\utility</Value>
+            <Value>C:\Users\Stuart\Desktop\arduino-1.0.5-r2 (NDEF Writer)\libraries\PN532</Value>
+            <Value>C:\Users\Stuart\Desktop\arduino-1.0.5-r2 (NDEF Writer)\libraries\PN532\utility</Value>
+            <Value>C:\Users\Stuart\Desktop\arduino-1.0.5-r2 (NDEF Writer)\libraries\NDEF_master</Value>
+            <Value>C:\Users\Stuart\Desktop\arduino-1.0.5-r2 (NDEF Writer)\libraries\NDEF_master\utility</Value>
+            <Value>c:\users\stuart\desktop\arduino-1.0.5-r2 (ndef writer)\hardware\tools\avr\avr\include\</Value>
+            <Value>c:\users\stuart\desktop\arduino-1.0.5-r2 (ndef writer)\hardware\tools\avr\avr\include\avr\</Value>
+            <Value>c:\users\stuart\desktop\arduino-1.0.5-r2 (ndef writer)\hardware\tools\avr\avr\</Value>
+            <Value>c:\users\stuart\desktop\arduino-1.0.5-r2 (ndef writer)\hardware\tools\avr\lib\gcc\avr\4.3.2\include\</Value>
             <Value>
             </Value>
           </ListValues>
@@ -190,6 +204,7 @@ location.sketchbook=C:\Users\Stuart\Documents\Arduino
         <avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>
         <avrgcc.compiler.symbols.DefSymbols>
           <ListValues>
+            <Value>__AVR_ATmega328p__</Value>
             <Value>__AVR_ATmega328P__</Value>
             <Value>ARDUINO=101</Value>
             <Value>ARDUINO_MAIN</Value>
@@ -200,14 +215,20 @@ location.sketchbook=C:\Users\Stuart\Documents\Arduino
         </avrgcc.compiler.symbols.DefSymbols>
         <avrgcc.compiler.directories.IncludePaths>
           <ListValues>
-            <Value>C:\Users\Stuart\Desktop\arduino-1.0.5-r2 (MasterController and Panels)\hardware\arduino\cores\arduino</Value>
-            <Value>C:\Users\Stuart\Desktop\arduino-1.0.5-r2 (MasterController and Panels)\hardware\arduino\variants\standard</Value>
-            <Value>C:\Users\Stuart\Desktop\arduino-1.0.5-r2 (MasterController and Panels)\libraries\NFC</Value>
-            <Value>C:\Users\Stuart\Desktop\arduino-1.0.5-r2 (MasterController and Panels)\libraries\NFC\utility</Value>
-            <Value>c:\users\stuart\desktop\arduino-1.0.5-r2 (mastercontroller and panels)\hardware\tools\avr\avr\include\</Value>
-            <Value>c:\users\stuart\desktop\arduino-1.0.5-r2 (mastercontroller and panels)\hardware\tools\avr\avr\include\avr\</Value>
-            <Value>c:\users\stuart\desktop\arduino-1.0.5-r2 (mastercontroller and panels)\hardware\tools\avr\avr\</Value>
-            <Value>c:\users\stuart\desktop\arduino-1.0.5-r2 (mastercontroller and panels)\hardware\tools\avr\lib\gcc\avr\4.3.2\include\</Value>
+            <Value>C:\Users\Stuart\Desktop\arduino-1.0.5-r2 (NDEF Writer)\hardware\arduino\cores\arduino</Value>
+            <Value>C:\Users\Stuart\Desktop\arduino-1.0.5-r2 (NDEF Writer)\hardware\arduino\variants\standard</Value>
+            <Value>C:\Users\Stuart\Desktop\arduino-1.0.5-r2 (NDEF Writer)\libraries\Wire</Value>
+            <Value>C:\Users\Stuart\Desktop\arduino-1.0.5-r2 (NDEF Writer)\libraries\Wire\utility</Value>
+            <Value>C:\Users\Stuart\Desktop\arduino-1.0.5-r2 (NDEF Writer)\libraries\PN532_I2C</Value>
+            <Value>C:\Users\Stuart\Desktop\arduino-1.0.5-r2 (NDEF Writer)\libraries\PN532_I2C\utility</Value>
+            <Value>C:\Users\Stuart\Desktop\arduino-1.0.5-r2 (NDEF Writer)\libraries\PN532</Value>
+            <Value>C:\Users\Stuart\Desktop\arduino-1.0.5-r2 (NDEF Writer)\libraries\PN532\utility</Value>
+            <Value>C:\Users\Stuart\Desktop\arduino-1.0.5-r2 (NDEF Writer)\libraries\NDEF_master</Value>
+            <Value>C:\Users\Stuart\Desktop\arduino-1.0.5-r2 (NDEF Writer)\libraries\NDEF_master\utility</Value>
+            <Value>c:\users\stuart\desktop\arduino-1.0.5-r2 (ndef writer)\hardware\tools\avr\avr\include\</Value>
+            <Value>c:\users\stuart\desktop\arduino-1.0.5-r2 (ndef writer)\hardware\tools\avr\avr\include\avr\</Value>
+            <Value>c:\users\stuart\desktop\arduino-1.0.5-r2 (ndef writer)\hardware\tools\avr\avr\</Value>
+            <Value>c:\users\stuart\desktop\arduino-1.0.5-r2 (ndef writer)\hardware\tools\avr\lib\gcc\avr\4.3.2\include\</Value>
           </ListValues>
         </avrgcc.compiler.directories.IncludePaths>
         <avrgcc.compiler.optimization.level>Optimize (-O1)</avrgcc.compiler.optimization.level>
@@ -220,6 +241,7 @@ location.sketchbook=C:\Users\Stuart\Documents\Arduino
         <avrgcccpp.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcccpp.compiler.general.ChangeDefaultBitFieldUnsigned>
         <avrgcccpp.compiler.symbols.DefSymbols>
           <ListValues>
+            <Value>__AVR_ATmega328p__</Value>
             <Value>__AVR_ATmega328P__</Value>
             <Value>ARDUINO=101</Value>
             <Value>ARDUINO_MAIN</Value>
@@ -230,14 +252,20 @@ location.sketchbook=C:\Users\Stuart\Documents\Arduino
         </avrgcccpp.compiler.symbols.DefSymbols>
         <avrgcccpp.compiler.directories.IncludePaths>
           <ListValues>
-            <Value>C:\Users\Stuart\Desktop\arduino-1.0.5-r2 (MasterController and Panels)\hardware\arduino\cores\arduino</Value>
-            <Value>C:\Users\Stuart\Desktop\arduino-1.0.5-r2 (MasterController and Panels)\hardware\arduino\variants\standard</Value>
-            <Value>C:\Users\Stuart\Desktop\arduino-1.0.5-r2 (MasterController and Panels)\libraries\NFC</Value>
-            <Value>C:\Users\Stuart\Desktop\arduino-1.0.5-r2 (MasterController and Panels)\libraries\NFC\utility</Value>
-            <Value>c:\users\stuart\desktop\arduino-1.0.5-r2 (mastercontroller and panels)\hardware\tools\avr\avr\include\</Value>
-            <Value>c:\users\stuart\desktop\arduino-1.0.5-r2 (mastercontroller and panels)\hardware\tools\avr\avr\include\avr\</Value>
-            <Value>c:\users\stuart\desktop\arduino-1.0.5-r2 (mastercontroller and panels)\hardware\tools\avr\avr\</Value>
-            <Value>c:\users\stuart\desktop\arduino-1.0.5-r2 (mastercontroller and panels)\hardware\tools\avr\lib\gcc\avr\4.3.2\include\</Value>
+            <Value>C:\Users\Stuart\Desktop\arduino-1.0.5-r2 (NDEF Writer)\hardware\arduino\cores\arduino</Value>
+            <Value>C:\Users\Stuart\Desktop\arduino-1.0.5-r2 (NDEF Writer)\hardware\arduino\variants\standard</Value>
+            <Value>C:\Users\Stuart\Desktop\arduino-1.0.5-r2 (NDEF Writer)\libraries\Wire</Value>
+            <Value>C:\Users\Stuart\Desktop\arduino-1.0.5-r2 (NDEF Writer)\libraries\Wire\utility</Value>
+            <Value>C:\Users\Stuart\Desktop\arduino-1.0.5-r2 (NDEF Writer)\libraries\PN532_I2C</Value>
+            <Value>C:\Users\Stuart\Desktop\arduino-1.0.5-r2 (NDEF Writer)\libraries\PN532_I2C\utility</Value>
+            <Value>C:\Users\Stuart\Desktop\arduino-1.0.5-r2 (NDEF Writer)\libraries\PN532</Value>
+            <Value>C:\Users\Stuart\Desktop\arduino-1.0.5-r2 (NDEF Writer)\libraries\PN532\utility</Value>
+            <Value>C:\Users\Stuart\Desktop\arduino-1.0.5-r2 (NDEF Writer)\libraries\NDEF_master</Value>
+            <Value>C:\Users\Stuart\Desktop\arduino-1.0.5-r2 (NDEF Writer)\libraries\NDEF_master\utility</Value>
+            <Value>c:\users\stuart\desktop\arduino-1.0.5-r2 (ndef writer)\hardware\tools\avr\avr\include\</Value>
+            <Value>c:\users\stuart\desktop\arduino-1.0.5-r2 (ndef writer)\hardware\tools\avr\avr\include\avr\</Value>
+            <Value>c:\users\stuart\desktop\arduino-1.0.5-r2 (ndef writer)\hardware\tools\avr\avr\</Value>
+            <Value>c:\users\stuart\desktop\arduino-1.0.5-r2 (ndef writer)\hardware\tools\avr\lib\gcc\avr\4.3.2\include\</Value>
             <Value>
             </Value>
           </ListValues>
