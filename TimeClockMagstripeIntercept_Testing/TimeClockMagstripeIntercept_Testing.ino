@@ -33,7 +33,7 @@ void setup()
 	
 	nfc.begin();
 	
-	delay(4000); //give the timeclock a moment to stabilize after reset
+	delay(4000); //give the time clock a moment to stabilize after reset
 }
 
 void loop()
@@ -44,15 +44,25 @@ void loop()
 		if(tag.hasNdefMessage())
 		{
 			NdefMessage message = tag.getNdefMessage();
+			NdefRecord record = message.getRecord(0);
+			
+			uint8_t payloadLength = record.getPayloadLength();
+			uint8_t payload[payloadLength];
+			
+			uint16_t timeforce_id = 0;
+			
+			record.getPayload(payload);
+			
+			for(uint8_t byte_counter = 3; byte_counter < payloadLength; byte_counter++) //skip the first three bytes because they're only attributes
+			{
+				timeforce_id += payload[byte_counter];
+				if((byte_counter+1) < payloadLength)
+					timeforce_id *= 10;
+			}
+			
+			if(timeforce_id > 0 && timeforce_id <= 9999)
+				emulateMagstripe(timeforce_id);
 		}
-	}
-	if(nfc.InListPassiveTarget(nfc_buffer) && nfc_buffer[0] >= 4)
-	{
-		uint16_t TimeForceID = NDEF2TimeForce(&nfc_buffer[1], nfc_buffer[0]);
-		if(TimeForceID > 0)
-		emulateMagstripe(TimeForceID);
-		
-		delay(2000);
 	}
 }
 
@@ -63,19 +73,6 @@ void initalizePins()
 		pinMode(pin_counter, OUTPUT);
 		digitalWrite(pin_counter, HIGH);
 	}
-}
-
-uint16_t convertUIDToTimeForce(uint8_t UID[], uint8_t UID_length)
-{
-	uint64_t assembled_UID = 0;
-	for(int index_counter = 0; index_counter < UID_length; index_counter++)
-	assembled_UID |= (uint64_t)UID[index_counter] << (8*((UID_length-1)-index_counter));
-	
-	for(int index_counter = 0; index_counter < NUM_CONV_IDS; index_counter++)
-	if(CONVERSION_UIDS[index_counter] == assembled_UID)
-	return CONVERSION_DB_ID[index_counter];
-	
-	return 0;
 }
 
 //accepts any positive number <= 9999
