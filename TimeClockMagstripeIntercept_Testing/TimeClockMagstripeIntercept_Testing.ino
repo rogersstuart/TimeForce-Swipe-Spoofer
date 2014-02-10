@@ -88,9 +88,9 @@ uint8_t emulateMagstripe(uint16_t to_convert)
 		to_convert = to_convert/10;
 		
 		if(to_convert > 0)
-		char_rep_index++;
+			char_rep_index++;
 		else
-		break;
+			break;
 	}
 	
 	uint8_t lrc_counter_0 = 2, lrc_counter_1 = 2, lrc_counter_2 = 1, lrc_counter_3 = 2;
@@ -117,13 +117,13 @@ uint8_t emulateMagstripe(uint16_t to_convert)
 		
 		//increment the lrc counters
 		if((char_rep[index_counter] & 0b10000) > 0)
-		lrc_counter_0++;
+			lrc_counter_0++;
 		if((char_rep[index_counter] & 0b1000) > 0)
-		lrc_counter_1++;
+			lrc_counter_1++;
 		if((char_rep[index_counter] & 0b100) > 0)
-		lrc_counter_2++;
+			lrc_counter_2++;
 		if((char_rep[index_counter] & 0b10) > 0)
-		lrc_counter_3++;
+			lrc_counter_3++;
 	}
 	
 	//compute the lrc and lrc parity
@@ -142,16 +142,16 @@ uint8_t emulateMagstripe(uint16_t to_convert)
 	digitalWrite(7, LOW);
 	
 	for(int clock_counter = 0; clock_counter < 11; clock_counter++)
-	pulseClock();
+		pulseClock();
 	
 	shiftOutByte(~start_sentinel);
 	while(1)
 	{
 		shiftOutByte(~char_rep[char_rep_index]);
 		if(char_rep_index == 0)
-		break;
+			break;
 		else
-		char_rep_index--;
+			char_rep_index--;
 	}
 	shiftOutByte(~end_sentinel);
 	shiftOutByte(~lrc);
@@ -159,7 +159,7 @@ uint8_t emulateMagstripe(uint16_t to_convert)
 	digitalWrite(5, HIGH);
 	
 	for(int clock_counter = 0; clock_counter < 11; clock_counter++)
-	pulseClock();
+		pulseClock();
 	
 	digitalWrite(7, HIGH);
 	
