@@ -21,11 +21,14 @@
 const uint8_t start_sentinel = 0b11010;
 const uint8_t end_sentinel   = 0b11111;
 
-PN532_I2C pn532_i2c(Wire);
-NfcAdapter nfc = NfcAdapter(pn532_i2c);
+const uint8_t key[6] = {0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF};
+
+NFC_Module nfc;
 
 void setup()
 {
+	Serial.begin(9600);
+	
 	initalizePins();
 
 	nfc.begin();
@@ -35,9 +38,21 @@ void setup()
 
 void loop()
 {	
-	uint8_t nfc_buffer[32], card_present;
+	uint8_t nfc_buffer[32], block_buffer[16], card_present;
 	
 	card_present = nfc.InListPassiveTarget(nfc_buffer);
+	if(card_present)
+	{
+		for(uint8_t block_num = 4; block_num < 8; block_num++)
+			if(nfc.MifareAuthentication(0, block_num, nfc_buffer+1, nfc_buffer[0], key))
+			{
+				if(nfc.MifareReadBlock(block_num, block_buffer))
+				{
+					nfc.puthex(block_buffer, 16);
+					Serial.println();
+				}
+			}
+	}
 }
 
 void initalizePins()
