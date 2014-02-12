@@ -21,14 +21,15 @@
 const uint8_t start_sentinel = 0b11010;
 const uint8_t end_sentinel   = 0b11111;
 
-const uint8_t key[6] = {0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF};
+uint8_t NDEF_key[6] = {0xD3, 0xF7, 0xD3, 0xF7, 0xD3, 0xF7};
+	
+uint32_t old_UID_holding, UID_holding_timer;
+uint16_t UID_holding_timeout = 2500;
 
 NFC_Module nfc;
 
 void setup()
 {
-	Serial.begin(9600);
-	
 	initalizePins();
 
 	nfc.begin();
@@ -38,20 +39,43 @@ void setup()
 
 void loop()
 {	
-	uint8_t nfc_buffer[32], block_buffer[16], card_present;
+	uint8_t nfc_buffer[32], block_buffer[16], card_present, block_num = 4, transmission_successful = 0;
 	
 	card_present = nfc.InListPassiveTarget(nfc_buffer);
+	
 	if(card_present)
 	{
-		for(uint8_t block_num = 4; block_num < 8; block_num++)
-			if(nfc.MifareAuthentication(0, block_num, nfc_buffer+1, nfc_buffer[0], key))
+		uint32_t new_UID_holding  = (uint32_t)nfc_buffer[1] << 24;
+				 new_UID_holding |= (uint32_t)nfc_buffer[2] << 16;
+				 new_UID_holding |= (uint32_t)nfc_buffer[3] << 8;
+			   	 new_UID_holding |= (uint32_t)nfc_buffer[4];
+		
+		if(old_UID_holding != new_UID_holding)
+			if(nfc.MifareAuthentication(0, block_num, nfc_buffer+1, nfc_buffer[0], NDEF_key))
 			{
+				//all of the card numbers can fit in one block so lets save time and only read the one we need
 				if(nfc.MifareReadBlock(block_num, block_buffer))
 				{
-					nfc.puthex(block_buffer, 16);
-					Serial.println();
+					 uint16_t timeforce_id = block_buffer[11] - 48;
+				 
+					 for(uint8_t byte_counter = 12; block_buffer[byte_counter] != 0xFE; byte_counter++)
+					 {
+						 timeforce_id *= 10;
+						 timeforce_id += block_buffer[byte_counter] - 48;
+					 }
+				 
+					 emulateMagstripe(timeforce_id);
+				 
+					 old_UID_holding = new_UID_holding;
+					 UID_holding_timer = millis() + UID_holding_timeout;
 				}
 			}
+	}
+	
+	if(old_UID_holding > 0)
+	{
+		if(millis() > UID_holding_timer)
+			old_UID_holding = 0;
 	}
 }
 
