@@ -29,32 +29,30 @@ NfcAdapter nfc = NfcAdapter(pn532_i2c);
 void setup()
 {
 	initalizePins();
-	
-	delay(4000); //give the time clock a moment to stabilize after reset
-	
+
 	Serial.begin(9600);
 	
-	nfc.begin();		
+	nfc.begin();
+	
+	pinMode(13, OUTPUT);	
 }
 
 void loop()
-{
-	if(nfc.tagPresent())
+{	
+  if(nfc.tagPresent())
 	{
 		NfcTag tag = nfc.read();
-		
-		tag.getTagType();
-		Serial.println(tag.getUidString());
-		
 		if(tag.hasNdefMessage())
 		{
+			digitalWrite(13, HIGH);
+			
 			NdefMessage message = tag.getNdefMessage();
 			
-			Serial.println(message.getRecordCount());
+			//Serial.println(message.getRecordCount());
 			
 			NdefRecord record = message.getRecord(0);
 			
-			uint8_t payloadLength = record.getPayloadLength();
+			int payloadLength = record.getPayloadLength();
 			uint8_t payload[payloadLength];
 			
 			uint16_t timeforce_id = 0;
@@ -62,11 +60,13 @@ void loop()
 			record.getPayload(payload);
 			
 			for(uint8_t byte_counter = 3; byte_counter < payloadLength; byte_counter++) //skip the first three bytes because they're only attributes
-			{
-				timeforce_id += payload[byte_counter];
+			{				
+                            timeforce_id += (payload[byte_counter] - 48);
 				if((byte_counter+1) < payloadLength)
 					timeforce_id *= 10;
 			}
+
+Serial.println(timeforce_id);
 			
 			if(timeforce_id > 0 && timeforce_id <= 9999)
 				emulateMagstripe(timeforce_id);
