@@ -1,7 +1,5 @@
 #include <Wire.h>
-#include <PN532_I2C.h>
-#include <PN532.h>
-#include <NfcAdapter.h>
+#include <nfc.h>
 
 //Magstripe Interceptor and Emulator
 
@@ -30,48 +28,16 @@ void setup()
 {
 	initalizePins();
 
-	Serial.begin(9600);
-	
 	nfc.begin();
 	
-	pinMode(13, OUTPUT);	
+	nfc.SAMConfiguration();	
 }
 
 void loop()
 {	
-  if(nfc.tagPresent())
-	{
-		NfcTag tag = nfc.read();
-		if(tag.hasNdefMessage())
-		{
-			digitalWrite(13, HIGH);
-			
-			NdefMessage message = tag.getNdefMessage();
-			
-			//Serial.println(message.getRecordCount());
-			
-			NdefRecord record = message.getRecord(0);
-			
-			int payloadLength = record.getPayloadLength();
-			uint8_t payload[payloadLength];
-			
-			uint16_t timeforce_id = 0;
-			
-			record.getPayload(payload);
-			
-			for(uint8_t byte_counter = 3; byte_counter < payloadLength; byte_counter++) //skip the first three bytes because they're only attributes
-			{				
-                            timeforce_id += (payload[byte_counter] - 48);
-				if((byte_counter+1) < payloadLength)
-					timeforce_id *= 10;
-			}
-
-Serial.println(timeforce_id);
-			
-			if(timeforce_id > 0 && timeforce_id <= 9999)
-				emulateMagstripe(timeforce_id);
-		}
-	}
+	uint8_t nfc_buffer[32], card_present;
+	
+	card_present = nfc.InListPassiveTarget(nfc_buffer);
 }
 
 void initalizePins()
