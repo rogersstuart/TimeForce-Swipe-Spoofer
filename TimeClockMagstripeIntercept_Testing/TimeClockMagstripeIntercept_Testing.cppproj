@@ -18,8 +18,7 @@
     <ToolchainFlavour>Native</ToolchainFlavour>
     <KeepTimersRunning>true</KeepTimersRunning>
     <OverrideVtor>false</OverrideVtor>
-    <OverrideVtorValue>
-    </OverrideVtorValue>
+    <OverrideVtorValue>exception_table</OverrideVtorValue>
     <eraseonlaunchrule>0</eraseonlaunchrule>
     <ProgFlashFromRam>true</ProgFlashFromRam>
     <RamSnippetAddress>0x20000000</RamSnippetAddress>
@@ -64,14 +63,8 @@
           <ListValues>
             <Value>C:\Users\Stuart\Desktop\arduino-1.0.5-r2 (NDEF Writer)\hardware\arduino\cores\arduino</Value>
             <Value>C:\Users\Stuart\Desktop\arduino-1.0.5-r2 (NDEF Writer)\hardware\arduino\variants\standard</Value>
-            <Value>C:\Users\Stuart\Desktop\arduino-1.0.5-r2 (NDEF Writer)\libraries\Wire</Value>
-            <Value>C:\Users\Stuart\Desktop\arduino-1.0.5-r2 (NDEF Writer)\libraries\Wire\utility</Value>
-            <Value>C:\Users\Stuart\Desktop\arduino-1.0.5-r2 (NDEF Writer)\libraries\PN532_I2C</Value>
-            <Value>C:\Users\Stuart\Desktop\arduino-1.0.5-r2 (NDEF Writer)\libraries\PN532_I2C\utility</Value>
-            <Value>C:\Users\Stuart\Desktop\arduino-1.0.5-r2 (NDEF Writer)\libraries\PN532</Value>
-            <Value>C:\Users\Stuart\Desktop\arduino-1.0.5-r2 (NDEF Writer)\libraries\PN532\utility</Value>
-            <Value>C:\Users\Stuart\Desktop\arduino-1.0.5-r2 (NDEF Writer)\libraries\NDEF_master</Value>
-            <Value>C:\Users\Stuart\Desktop\arduino-1.0.5-r2 (NDEF Writer)\libraries\NDEF_master\utility</Value>
+            <Value>C:\Users\Stuart\Desktop\arduino-1.0.5-r2 (NDEF Writer)\libraries\NFC</Value>
+            <Value>C:\Users\Stuart\Desktop\arduino-1.0.5-r2 (NDEF Writer)\libraries\NFC\utility</Value>
             <Value>c:\users\stuart\desktop\arduino-1.0.5-r2 (ndef writer)\hardware\tools\avr\avr\include\</Value>
             <Value>c:\users\stuart\desktop\arduino-1.0.5-r2 (ndef writer)\hardware\tools\avr\avr\include\avr\</Value>
             <Value>c:\users\stuart\desktop\arduino-1.0.5-r2 (ndef writer)\hardware\tools\avr\avr\</Value>
@@ -101,14 +94,8 @@
           <ListValues>
             <Value>C:\Users\Stuart\Desktop\arduino-1.0.5-r2 (NDEF Writer)\hardware\arduino\cores\arduino</Value>
             <Value>C:\Users\Stuart\Desktop\arduino-1.0.5-r2 (NDEF Writer)\hardware\arduino\variants\standard</Value>
-            <Value>C:\Users\Stuart\Desktop\arduino-1.0.5-r2 (NDEF Writer)\libraries\Wire</Value>
-            <Value>C:\Users\Stuart\Desktop\arduino-1.0.5-r2 (NDEF Writer)\libraries\Wire\utility</Value>
-            <Value>C:\Users\Stuart\Desktop\arduino-1.0.5-r2 (NDEF Writer)\libraries\PN532_I2C</Value>
-            <Value>C:\Users\Stuart\Desktop\arduino-1.0.5-r2 (NDEF Writer)\libraries\PN532_I2C\utility</Value>
-            <Value>C:\Users\Stuart\Desktop\arduino-1.0.5-r2 (NDEF Writer)\libraries\PN532</Value>
-            <Value>C:\Users\Stuart\Desktop\arduino-1.0.5-r2 (NDEF Writer)\libraries\PN532\utility</Value>
-            <Value>C:\Users\Stuart\Desktop\arduino-1.0.5-r2 (NDEF Writer)\libraries\NDEF_master</Value>
-            <Value>C:\Users\Stuart\Desktop\arduino-1.0.5-r2 (NDEF Writer)\libraries\NDEF_master\utility</Value>
+            <Value>C:\Users\Stuart\Desktop\arduino-1.0.5-r2 (NDEF Writer)\libraries\NFC</Value>
+            <Value>C:\Users\Stuart\Desktop\arduino-1.0.5-r2 (NDEF Writer)\libraries\NFC\utility</Value>
             <Value>c:\users\stuart\desktop\arduino-1.0.5-r2 (ndef writer)\hardware\tools\avr\avr\include\</Value>
             <Value>c:\users\stuart\desktop\arduino-1.0.5-r2 (ndef writer)\hardware\tools\avr\avr\include\avr\</Value>
             <Value>c:\users\stuart\desktop\arduino-1.0.5-r2 (ndef writer)\hardware\tools\avr\avr\</Value>
@@ -217,14 +204,8 @@ location.sketchbook=C:\Users\Stuart\Documents\Arduino
           <ListValues>
             <Value>C:\Users\Stuart\Desktop\arduino-1.0.5-r2 (NDEF Writer)\hardware\arduino\cores\arduino</Value>
             <Value>C:\Users\Stuart\Desktop\arduino-1.0.5-r2 (NDEF Writer)\hardware\arduino\variants\standard</Value>
-            <Value>C:\Users\Stuart\Desktop\arduino-1.0.5-r2 (NDEF Writer)\libraries\Wire</Value>
-            <Value>C:\Users\Stuart\Desktop\arduino-1.0.5-r2 (NDEF Writer)\libraries\Wire\utility</Value>
-            <Value>C:\Users\Stuart\Desktop\arduino-1.0.5-r2 (NDEF Writer)\libraries\PN532_I2C</Value>
-            <Value>C:\Users\Stuart\Desktop\arduino-1.0.5-r2 (NDEF Writer)\libraries\PN532_I2C\utility</Value>
-            <Value>C:\Users\Stuart\Desktop\arduino-1.0.5-r2 (NDEF Writer)\libraries\PN532</Value>
-            <Value>C:\Users\Stuart\Desktop\arduino-1.0.5-r2 (NDEF Writer)\libraries\PN532\utility</Value>
-            <Value>C:\Users\Stuart\Desktop\arduino-1.0.5-r2 (NDEF Writer)\libraries\NDEF_master</Value>
-            <Value>C:\Users\Stuart\Desktop\arduino-1.0.5-r2 (NDEF Writer)\libraries\NDEF_master\utility</Value>
+            <Value>C:\Users\Stuart\Desktop\arduino-1.0.5-r2 (NDEF Writer)\libraries\NFC</Value>
+            <Value>C:\Users\Stuart\Desktop\arduino-1.0.5-r2 (NDEF Writer)\libraries\NFC\utility</Value>
             <Value>c:\users\stuart\desktop\arduino-1.0.5-r2 (ndef writer)\hardware\tools\avr\avr\include\</Value>
             <Value>c:\users\stuart\desktop\arduino-1.0.5-r2 (ndef writer)\hardware\tools\avr\avr\include\avr\</Value>
             <Value>c:\users\stuart\desktop\arduino-1.0.5-r2 (ndef writer)\hardware\tools\avr\avr\</Value>
@@ -254,14 +235,8 @@ location.sketchbook=C:\Users\Stuart\Documents\Arduino
           <ListValues>
             <Value>C:\Users\Stuart\Desktop\arduino-1.0.5-r2 (NDEF Writer)\hardware\arduino\cores\arduino</Value>
             <Value>C:\Users\Stuart\Desktop\arduino-1.0.5-r2 (NDEF Writer)\hardware\arduino\variants\standard</Value>
-            <Value>C:\Users\Stuart\Desktop\arduino-1.0.5-r2 (NDEF Writer)\libraries\Wire</Value>
-            <Value>C:\Users\Stuart\Desktop\arduino-1.0.5-r2 (NDEF Writer)\libraries\Wire\utility</Value>
-            <Value>C:\Users\Stuart\Desktop\arduino-1.0.5-r2 (NDEF Writer)\libraries\PN532_I2C</Value>
-            <Value>C:\Users\Stuart\Desktop\arduino-1.0.5-r2 (NDEF Writer)\libraries\PN532_I2C\utility</Value>
-            <Value>C:\Users\Stuart\Desktop\arduino-1.0.5-r2 (NDEF Writer)\libraries\PN532</Value>
-            <Value>C:\Users\Stuart\Desktop\arduino-1.0.5-r2 (NDEF Writer)\libraries\PN532\utility</Value>
-            <Value>C:\Users\Stuart\Desktop\arduino-1.0.5-r2 (NDEF Writer)\libraries\NDEF_master</Value>
-            <Value>C:\Users\Stuart\Desktop\arduino-1.0.5-r2 (NDEF Writer)\libraries\NDEF_master\utility</Value>
+            <Value>C:\Users\Stuart\Desktop\arduino-1.0.5-r2 (NDEF Writer)\libraries\NFC</Value>
+            <Value>C:\Users\Stuart\Desktop\arduino-1.0.5-r2 (NDEF Writer)\libraries\NFC\utility</Value>
             <Value>c:\users\stuart\desktop\arduino-1.0.5-r2 (ndef writer)\hardware\tools\avr\avr\include\</Value>
             <Value>c:\users\stuart\desktop\arduino-1.0.5-r2 (ndef writer)\hardware\tools\avr\avr\include\avr\</Value>
             <Value>c:\users\stuart\desktop\arduino-1.0.5-r2 (ndef writer)\hardware\tools\avr\avr\</Value>

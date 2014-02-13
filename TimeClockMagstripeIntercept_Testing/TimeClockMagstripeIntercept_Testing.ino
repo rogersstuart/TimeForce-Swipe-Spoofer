@@ -67,14 +67,14 @@ void loop()
 					 emulateMagstripe(timeforce_id);
 				 
 					 old_UID_holding = new_UID_holding;
-					 UID_holding_timer = millis() + UID_holding_timeout;
+					 UID_holding_timer = millis();
 				}
 			}
 	}
 	
 	if(old_UID_holding > 0)
 	{
-		if(millis() > UID_holding_timer)
+		if(millis()-UID_holding_timer > UID_holding_timeout)
 			old_UID_holding = 0;
 	}
 }
