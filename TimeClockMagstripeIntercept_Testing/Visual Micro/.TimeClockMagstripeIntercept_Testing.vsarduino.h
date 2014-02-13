@@ -23,4 +23,4 @@ void pulseClock();
 
 #include "C:\Users\Stuart\Desktop\arduino-1.0.5-r2 (NDEF Writer)\hardware\arduino\variants\standard\pins_arduino.h" 
 #include "C:\Users\Stuart\Desktop\arduino-1.0.5-r2 (NDEF Writer)\hardware\arduino\cores\arduino\arduino.h"
-#include "C:\Users\Stuart\Documents\Arduino\TimeClockMagstripeIntercept_Testing\TimeClockMagstripeIntercept_Testing.ino"
+#include "C:\Users\Stuart\Documents\Atmel Studio\6.1\TimeClockMagstripeIntercept_Testing\TimeClockMagstripeIntercept_Testing.ino"
