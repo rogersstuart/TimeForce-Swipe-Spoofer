@@ -1,5 +1,7 @@
 #include <Wire.h>
 #include <nfc.h>
+#include <avr/wdt.h>
+#include <avr/interrupt.h>
 
 //Magstripe Interceptor and Emulator
 
@@ -33,8 +35,15 @@ void setup()
 	initalizePins();
 
 	nfc.begin();
+	nfc.SAMConfiguration();
 	
-	nfc.SAMConfiguration();	
+	wdt_enable(WDTO_4S);
+	
+	cli();
+	
+	WDTCSR |= 0b01000000; //configure the watchdog timer to cause an interrupt
+	
+	sei();
 }
 
 void loop()
@@ -77,6 +86,8 @@ void loop()
 		if(millis()-UID_holding_timer > UID_holding_timeout)
 			old_UID_holding = 0;
 	}
+	
+	wdt_reset();
 }
 
 void initalizePins()
@@ -196,4 +207,10 @@ void pulseClock()
 	delayMicroseconds(20);
 	digitalWrite(6, HIGH);
 	delayMicroseconds(40);
+}
+
+ISR(WDT_vect)
+{
+	wdt_disable();
+	asm volatile ("  jmp 0");
 }
